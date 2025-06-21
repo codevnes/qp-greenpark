@@ -1,0 +1,51 @@
+// Mixins - phải import đầu tiên
+@import 'mixins/breakpoints';
+@import 'mixins/spacing';
+
+// Base
+@import 'base/variables';
+@import 'base/bootstrap-variables';
+@import 'base/typography';
+@import 'base/utilities';
+
+// Layout
+@import 'layout/general';
+@import 'layout/header';
+@import 'layout/footer';
+@import 'layout/sidebar';
+
+// Components
+@import 'components/buttons';
+@import 'components/cards';
+@import 'components/forms';
+@import 'components/galleries';
+@import 'components/pagination';
+@import 'components/sliders';
+@import 'components/pagepiling';
+@import 'components/offcanvas-menu';
+
+// Sections
+@import 'sections/introduction';
+@import 'sections/advantage';
+@import 'sections/location';
+@import 'sections/masterplan';
+@import 'sections/video';
+@import 'sections/news';
+@import 'sections/perspective';
+@import 'sections/document';
+@import 'sections/contact';
+@import 'sections/overview';
+
+// Pages
+@import 'pages/home';
+@import 'pages/about';
+@import 'pages/contact';
+@import 'pages/property';
+@import 'pages/library';
+@import 'pages/news';
+@import 'pages/category';
+
+// Shortcodes
+@import 'shortcode/property-grid';
+@import 'shortcode/property-slider';
+@import 'shortcode/agent-card'; 

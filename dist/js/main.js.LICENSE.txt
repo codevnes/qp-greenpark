@@ -1,0 +1,45 @@
+/*!
+  * Bootstrap v5.3.7 (https://getbootstrap.com/)
+  * Copyright 2011-2025 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
+  */
+
+/*!
+ * pagepiling.js 1.5.6
+ *
+ * https://github.com/alvarotrigo/pagePiling.js
+ * @license MIT licensed
+ *
+ * Copyright (C) 2016 alvarotrigo.com - A project by Alvaro Trigo
+ */
+
+/*! @name @videojs/http-streaming @version 3.17.0 @license Apache-2.0 */
+
+/*! @name aes-decrypter @version 4.0.2 @license Apache-2.0 */
+
+/*! @name m3u8-parser @version 7.2.0 @license Apache-2.0 */
+
+/*! @name pkcs7 @version 1.0.4 @license Apache-2.0 */
+
+/*! @name videojs-contrib-quality-levels @version 4.1.0 @license Apache-2.0 */
+
+/**
+ * @license
+ * slighly modified parse-headers 2.0.2 <https://github.com/kesla/parse-headers/>
+ * Copyright (c) 2014 David Björklund
+ * Available under the MIT license
+ * <https://github.com/kesla/parse-headers/blob/master/LICENCE>
+ */
+
+/**
+ * Owl carousel
+ * @version 2.3.4
+ * @author Bartosz Wojciechowski
+ * @author David Deutsch
+ * @license The MIT License (MIT)
+ * @todo Lazy Load Icon
+ * @todo prevent animationend bubling
+ * @todo itemsScaleUp
+ * @todo Test Zepto
+ * @todo stagePadding calculate wrong active classes
+ */

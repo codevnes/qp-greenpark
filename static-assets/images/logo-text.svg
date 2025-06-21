@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2677.63 560.19">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: Cinzel-Bold, Cinzel;
+        font-size: 302.08px;
+        font-weight: 700;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fffaee;
+      }
+
+      .cls-3 {
+        letter-spacing: .38em;
+      }
+
+      .cls-4 {
+        letter-spacing: .4em;
+      }
+
+      .cls-5 {
+        letter-spacing: .4em;
+      }
+
+      .cls-2 {
+        font-family: HJGothamMedium, HJGothamMedium;
+        font-size: 123px;
+      }
+
+      .cls-6 {
+        letter-spacing: -.04em;
+      }
+
+      .cls-7 {
+        letter-spacing: .02em;
+      }
+
+      .cls-8 {
+        letter-spacing: .03em;
+      }
+
+      .cls-9 {
+        letter-spacing: .03em;
+      }
+
+      .cls-10 {
+        letter-spacing: 0em;
+      }
+
+      .cls-11 {
+        letter-spacing: .01em;
+      }
+    </style>
+  </defs>
+  <g id="Layer_1-2" data-name="Layer_1">
+    <text class="cls-1" transform="translate(0 256.77)"><tspan class="cls-11" x="0" y="0">Q</tspan><tspan class="cls-8" x="269.76" y="0">P </tspan><tspan class="cls-10" x="561.57" y="0">G</tspan><tspan class="cls-7" x="815.62" y="0">R</tspan><tspan class="cls-9" x="1046.71" y="0">EE</tspan><tspan class="cls-8" x="1444.24" y="0">N </tspan><tspan class="cls-6" x="1799.18" y="0">P</tspan><tspan class="cls-8" x="1986.17" y="0">A</tspan><tspan class="cls-7" x="2211.82" y="0">R</tspan><tspan class="cls-8" x="2442.91" y="0">K</tspan></text>
+    <text class="cls-2" transform="translate(486.71 529.44)"><tspan class="cls-4" x="0" y="0">RESIDENCES </tspan><tspan class="cls-3" x="1199.81" y="0">B</tspan><tspan class="cls-5" x="1313.83" y="0">Y QP</tspan></text>
+  </g>
+</svg>

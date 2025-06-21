@@ -1,0 +1,328 @@
+.section-masterplan {
+    background-color: $color-primary;
+    background-image: linear-gradient(135deg, darken($color-primary, 10%) 0%, $color-primary 100%);    color: #fff;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    
+    // Background pattern
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('../static-assets/images/bg-masterplan.jpg');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        opacity: 0.1;
+        z-index: 0;
+    }
+    
+    // Container adjustments
+    .section-content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        padding: 40px 0;
+    }
+    
+    // Left side with title and description
+    &__info {
+        padding-right: 40px;
+   
+        
+        @media (max-width: $breakpoint-md) {
+            text-align: center;
+            padding-right: 0;
+            margin-bottom: 30px;
+            
+            .section-divider {
+                margin: 15px auto 25px;
+                
+                &:before {
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+            }
+        }
+    }
+    
+    &__description {
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 0 0 30px;
+        color: rgba($color-white, 0.9);
+        
+        @media (max-width: $breakpoint-md) {
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+    
+    // Tabs navigation
+    .masterplan-tabs {
+        background-color: rgba($color-black, 0.1);
+        border-radius: 16px;
+        overflow: hidden;
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        
+        &__nav {
+            display: flex;
+            background-color: rgba($color-black, 0.2);
+            
+            .masterplan-tab {
+                padding: 15px 25px;
+                flex: 1;
+                text-align: center;
+                text-transform: uppercase;
+                font-size: 16px;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+                color: rgba($color-white, 0.7);
+                cursor: pointer;
+                transition: all 0.3s ease;
+                position: relative;
+                
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 3px;
+                    background-color: transparent;
+                    transition: all 0.3s ease;
+                }
+                
+                &.active {
+                    color: #fff;
+                    
+                    &:after {
+                        background-color: $color-accent;
+                    }
+                }
+                
+                &:hover:not(.active) {
+                    color: rgba($color-white, 0.9);
+                    background-color: rgba($color-black, 0.1);
+                }
+            }
+        }
+        
+        &__content {
+            position: relative;
+            min-height: 400px;
+        }
+    }
+    
+    // Tab content
+    .masterplan-tab-content {
+        display: none;
+        padding: 20px;
+        
+        &.active {
+            display: block;
+        }
+        
+        &__floors {
+            display: flex;
+            border-bottom: 1px solid rgba($color-white, 0.1);
+            margin-bottom: 20px;
+            
+            .floor-tab {
+                padding: 10px 20px;
+                cursor: pointer;
+                color: rgba($color-white, 0.7);
+                transition: all 0.3s ease;
+                position: relative;
+                
+                &:after {
+                    content: '';
+                    position: absolute;
+                    bottom: -1px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background-color: transparent;
+                    transition: all 0.3s ease;
+                }
+                
+                &.active {
+                    color: $color-accent;
+                    
+                    &:after {
+                        background-color: $color-accent;
+                    }
+                }
+                
+                &:hover:not(.active) {
+                    color: rgba($color-white, 0.9);
+                }
+            }
+        }
+        
+        &__preview {
+            position: relative;
+            
+            .floor-content {
+                display: none;
+                
+                &.active {
+                    display: block;
+                }
+            }
+        }
+    }
+    
+    // Individual masterplan items
+    .masterplan-item__image {
+        position: relative;
+        overflow: hidden;
+        border-radius: 8px;
+        
+        a {
+            display: block;
+            text-decoration: none;
+        }
+        
+        img {
+            width: 100%;
+            display: block;
+            transition: transform 0.5s ease;
+        }
+        
+        &:hover {
+            img {
+                transform: scale(1.03);
+            }
+            
+            .masterplan-item__zoom {
+                opacity: 1;
+            }
+        }
+        
+        .masterplan-item__zoom {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color-black, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            cursor: pointer;
+            z-index: 1;
+            
+            i {
+                font-size: 30px;
+                color: $color-white;
+                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            }
+        }
+        
+        .masterplan-item__caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba($color-black, 0.8), rgba($color-black, 0));
+            padding: 30px 20px 15px;
+            z-index: 2;
+            
+            span {
+                font-size: 14px;
+                color: rgba(#fff, 0.9);
+                display: block;
+                text-align: center;
+            }
+        }
+    }
+    
+    // Responsive container
+    .container-fluid {
+        max-width: 1600px;
+        padding: 0 30px;
+        
+        @media (max-width: $breakpoint-sm) {
+            padding: 0 15px;
+        }
+    }
+    
+    // Mobile styles
+    @media (max-width: $breakpoint-md) {
+        min-height: auto;
+        padding: 60px 0;
+        
+        .masterplan-tabs {
+            margin-top: 20px;
+        }
+        
+        .masterplan-tab-content {
+            padding: 15px;
+            
+            &__floors {
+                margin-bottom: 15px;
+                justify-content: center;
+                
+                .floor-tab {
+                    padding: 8px 15px;
+                }
+            }
+        }
+    }
+}
+
+// Fancybox custom styling
+.fancybox-container {
+    .fancybox-bg {
+        background-color: $color-black;
+    }
+    
+    .fancybox-navigation .fancybox-button {
+        background: rgba($color-primary, 0.5);
+        
+        &:hover {
+            background: rgba($color-accent, 0.8);
+        }
+    }
+    
+    .fancybox-toolbar .fancybox-button {
+        background: rgba($color-primary, 0.5);
+        
+        &:hover {
+            background: rgba($color-accent, 0.8);
+        }
+    }
+    
+    .fancybox-caption {
+        background: linear-gradient(to top, rgba($color-black, 0.9) 0%, rgba($color-black, 0.5) 50%, rgba($color-black, 0) 100%);
+        font-family: $font-family-base;
+        font-size: 16px;
+        padding: 20px 0;
+    }
+}
+
+// Bootstrap utility classes to support grid display
+.d-none {
+    display: none;
+}
+
+.d-md-grid {
+    @media (min-width: $breakpoint-md) {
+        display: grid;
+    }
+}
+
+.d-md-none {
+    @media (min-width: $breakpoint-md) {
+        display: none;
+    }
+}

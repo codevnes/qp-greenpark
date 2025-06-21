@@ -1,0 +1,191 @@
+// Override Bootstrap color variables
+$primary: $color-primary;
+$secondary: $color-secondary;
+$success: $color-success;
+$info: $color-primary-light;
+$warning: $color-accent;
+$danger: #dc3545; // Giữ nguyên màu danger của Bootstrap
+$light: $color-bg;
+$dark: $color-text;
+
+// Override theme colors
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+);
+
+// Body
+$body-bg: $light;
+$body-color: $dark;
+
+// Font settings
+$font-family-sans-serif: $font-primary;
+$font-family-base: $font-primary;
+$font-size-base: 1rem;
+
+// Border radius
+$border-radius: $radius-base;
+$border-radius-lg: $radius-lg;
+$border-radius-sm: calc($radius-base / 2);
+
+// Cards
+$card-border-width: 0;
+$card-border-radius: $border-radius;
+$card-box-shadow: $shadow-card;
+
+// Buttons
+$btn-border-radius: $border-radius;
+$btn-border-radius-lg: $border-radius-lg;
+$btn-border-radius-sm: $border-radius-sm;
+
+// Forms
+$input-border-radius: $border-radius;
+$input-focus-border-color: $color-primary-light;
+$input-focus-box-shadow: 0 0 0 0.25rem rgba($color-primary, 0.25);
+
+// Button variants
+.btn-primary {
+  background-color: $color-primary !important;
+  border-color: $color-primary !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: darken($color-primary, 10%) !important;
+    border-color: darken($color-primary, 10%) !important;
+  }
+}
+
+.btn-secondary {
+  background-color: $color-secondary !important;
+  border-color: $color-secondary !important;
+  color: $color-text !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: darken($color-secondary, 10%) !important;
+    border-color: darken($color-secondary, 10%) !important;
+  }
+}
+
+.btn-success {
+  background-color: $color-success !important;
+  border-color: $color-success !important;
+}
+
+.btn-outline-primary {
+  color: $color-primary !important;
+  border-color: $color-primary !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: $color-primary !important;
+    color: $color-white !important;
+  }
+}
+
+.btn-outline-secondary {
+  color: $color-secondary !important;
+  border-color: $color-secondary !important;
+  
+  &:hover, &:focus, &:active {
+    background-color: $color-secondary !important;
+    color: $color-text !important;
+  }
+}
+
+// Background colors
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.bg-secondary {
+  background-color: $color-secondary !important;
+}
+
+.bg-success {
+  background-color: $color-success !important;
+}
+
+.bg-light {
+  background-color: $color-bg !important;
+}
+
+// Text colors
+.text-primary {
+  color: $color-primary !important;
+}
+
+.text-secondary {
+  color: $color-secondary !important;
+}
+
+// Form controls
+.form-control:focus {
+  border-color: $color-primary-light !important;
+  box-shadow: 0 0 0 0.25rem rgba($color-primary, 0.25) !important;
+}
+
+// Cards
+.card {
+  border-radius: $radius-base !important;
+  box-shadow: $shadow-card !important;
+  border: none !important;
+}
+
+// Pagination
+.page-item.active .page-link {
+  background-color: $color-primary !important;
+  border-color: $color-primary !important;
+}
+
+.page-link {
+  color: $color-primary !important;
+  
+  &:hover, &:focus {
+    color: darken($color-primary, 15%) !important;
+  }
+}
+
+// Nav links
+.nav-link {
+  color: $color-text !important;
+  
+  &:hover, &:focus, &.active {
+    color: $color-primary !important;
+  }
+}
+
+// Navbar
+.navbar-light .navbar-nav .nav-link {
+  color: rgba($color-text, 0.8) !important;
+  
+  &:hover, &:focus, &.active {
+    color: $color-primary !important;
+  }
+}
+
+// Alerts
+.alert-primary {
+  background-color: rgba($color-primary, 0.2) !important;
+  border-color: rgba($color-primary, 0.4) !important;
+  color: $color-primary !important;
+}
+
+.alert-secondary {
+  background-color: rgba($color-secondary, 0.2) !important;
+  border-color: rgba($color-secondary, 0.4) !important;
+  color: $color-text !important;
+}
+
+// Badges
+.badge.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.badge.bg-secondary {
+  background-color: $color-secondary !important;
+  color: $color-text !important;
+} 

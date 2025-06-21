@@ -1,0 +1,337 @@
+.section-contact {
+  color: #fff;
+  position: relative;
+  background-color: $color-primary;
+  background-image: linear-gradient(135deg, darken($color-primary, 10%) 0%, $color-primary 100%);
+  overflow: hidden;
+  
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba($color-green-900, 0.1);
+      z-index: 2;
+      background-image: linear-gradient(rgba($color-green-950, 0.85), rgba($color-green-950, 0.85));
+    }
+  
+    &:before {
+      content: "";
+      background: url(../../static-assets/images/before-contact.svg) left center no-repeat;
+      background-size: contain;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+  
+    .container {
+      position: relative;
+      z-index: 3;
+    }
+  
+    .row {
+      @media (max-width: $breakpoint-lg) {
+        flex-direction: column;
+      }
+    }
+  
+    // Left side - Info section
+    .contact-info {
+      padding-right: $spacing-lg;
+  
+      @media (max-width: $breakpoint-lg) {
+        padding-right: 0;
+        margin-bottom: $spacing-lg;
+      }
+    }
+  
+    .contact-logo {
+      margin-bottom: $spacing-lg;
+  
+      h2 {
+        font-size: $font-size-xxxl;
+        font-weight: $font-weight-bold;
+        color: $color-white;
+        margin: 0;
+      }
+    }
+  
+    .contact-contact-item {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: $spacing-md;
+  
+      .icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba($color-secondary, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-md;
+        color: $color-secondary;
+        flex-shrink: 0;
+  
+        i {
+          font-size: $font-size-lg;
+        }
+      }
+  
+      .content {
+        h4 {
+          font-size: $font-size-base;
+          margin: 0 0 5px;
+          color: $color-white;
+          font-weight: $font-weight-medium;
+        }
+  
+        p {
+          margin: 0;
+          font-size: $font-size-sm;
+          color: rgba($color-white, 0.8);
+          line-height: 1.5;
+        }
+      }
+    }
+  
+    .contact-social {
+      display: flex;
+      margin-top: $spacing-lg;
+  
+      .social-icon {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba($color-white, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: $spacing-md;
+        color: $color-white;
+        transition: all 0.3s ease;
+        text-decoration: none;
+  
+        &:hover {
+          background-color: $color-secondary;
+          color: $color-green-900;
+        }
+  
+        i {
+          font-size: $font-size-sm;
+        }
+      }
+    }
+  
+    // Right side - Form section
+    .contact-form {
+      @media (min-width: $breakpoint-lg) {
+        padding-left: $spacing-lg;
+      }
+    }
+  
+    .contact-form-wrapper {
+      background-color: rgba($color-green-950, 0.8);
+      border-radius: $radius-lg;
+      padding: $spacing-lg;
+      border: 1px solid rgba($color-white, 0.1);
+  
+      // CF7 Form Styling
+      .wpcf7 {
+        width: 100%;
+  
+        .wpcf7-form {
+          p {
+            margin-bottom: $spacing-md;
+          }
+  
+          label {
+            width: 100%;
+            color: $color-white;
+            font-weight: normal;
+            font-size: $font-size-sm;
+  
+            .wpcf7-form-control-wrap {
+              display: block;
+              margin-top: 5px;
+            }
+          }
+  
+          .wpcf7-submit {
+            background: linear-gradient(to right, $color-accent, $color-secondary);
+            color: $color-white;
+            border: none;
+            border-radius: 50px;
+            padding: $spacing-sm $spacing-lg;
+            font-size: $font-size-base;
+            font-weight: $font-weight-medium;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: auto;
+            min-width: 200px;
+            text-transform: uppercase;
+  
+            &:hover {
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba($color-secondary, 0.3);
+            }
+  
+            &:after {
+              content: '\f178';
+              font-family: 'Font Awesome 6 Pro';
+              margin-left: 10px;
+            }
+          }
+  
+          .wpcf7-not-valid-tip {
+            color: #ffb900;
+            font-size: $font-size-xs;
+            margin-top: 5px;
+          }
+  
+          .wpcf7-response-output {
+            margin: $spacing-md 0 0;
+            padding: $spacing-xs $spacing-sm;
+            border-radius: $radius-base;
+            font-size: $font-size-sm;
+            border: 1px solid transparent;
+  
+            &.wpcf7-validation-errors {
+              background-color: rgba(255, 185, 0, 0.1);
+              border-color: rgba(255, 185, 0, 0.3);
+              color: #ffb900;
+            }
+  
+            &.wpcf7-mail-sent-ok {
+              background-color: rgba(46, 204, 113, 0.1);
+              border-color: rgba(46, 204, 113, 0.3);
+              color: #2ecc71;
+            }
+          }
+        }
+      }
+    }
+  
+    // Fallback form styling (if CF7 not active)
+    .contact-form {
+      .form-row {
+        display: flex;
+        margin: 0 -10px;
+  
+        @media (max-width: $breakpoint-md) {
+          flex-direction: column;
+        }
+  
+        .form-group {
+          flex: 1;
+          padding: 0 10px;
+        }
+      }
+  
+      .form-group {
+        margin-bottom: $spacing-md;
+  
+        .form-control {
+          width: 100%;
+          background-color: transparent;
+          border: none;
+          border-bottom: 1px solid rgba($color-white, 0.3);
+          padding: $spacing-sm 0;
+          color: $color-white;
+          font-size: $font-size-sm;
+          transition: all 0.3s ease;
+          border-radius: 0;
+          text-transform: uppercase;
+  
+          &::placeholder {
+            color: rgba($color-white, 0.7);
+          }
+  
+          &:focus {
+            outline: none;
+            border-color: $color-secondary;
+          }
+        }
+  
+        textarea.form-control {
+          resize: vertical;
+          min-height: 60px;
+        }
+      }
+  
+      .select-group {
+        position: relative;
+  
+        select.form-control {
+          appearance: none;
+          cursor: pointer;
+        }
+  
+        .select-icon {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 24px;
+          height: 24px;
+          border-radius: 50%;
+          background-color: rgba($color-accent, 0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          pointer-events: none;
+  
+          i {
+            color: $color-white;
+            font-size: $font-size-xs;
+          }
+        }
+      }
+  
+      .form-submit {
+        margin-top: $spacing-lg;
+        text-align: center;
+  
+        .btn-submit {
+          background: linear-gradient(to right, $color-accent, $color-secondary);
+          color: $color-white;
+          border: none;
+          border-radius: 50px;
+          padding: $spacing-sm $spacing-lg;
+          padding-top: calc($spacing-sm + 3px);
+          font-size: $font-size-base;
+          font-weight: $font-weight-medium;
+          cursor: pointer;
+          transition: all 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin: 0 auto;
+          min-width: 200px;
+          line-height: 1.5;
+  
+          i {
+            margin-left: $spacing-sm;
+            transition: transform 0.3s ease;
+          }
+  
+          &:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba($color-secondary, 0.3);
+  
+            i {
+              transform: translateX(3px);
+            }
+          }
+        }
+      }
+    }
+  }

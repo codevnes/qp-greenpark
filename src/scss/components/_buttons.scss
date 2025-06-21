@@ -1,0 +1,78 @@
+// Button styles
+.btn {
+  font-weight: $font-weight-bold;
+  padding: $spacing-sm $spacing-lg;
+  border-radius: $radius-base;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.875rem;
+  
+  &.btn-lg {
+    padding: $spacing-md calc($spacing-lg + 4px);
+    font-size: 1rem;
+  }
+  
+  &.btn-sm {
+    padding: calc($spacing-xs + 2px) $spacing-md;
+    font-size: 0.75rem;
+  }
+}
+
+// Custom button with gradient
+.btn-gradient {
+  background: linear-gradient(to right, $color-primary, $color-primary-light);
+  border: none;
+  color: $color-white;
+  
+  &:hover, &:focus, &:active {
+    background: linear-gradient(to right, darken($color-primary, 5%), darken($color-primary-light, 5%));
+    color: $color-white;
+  }
+}
+
+// Outline buttons with hover effect
+.btn-outline-primary {
+  &:hover {
+    background-color: rgba($color-primary, 0.1);
+    color: $color-primary;
+    border-color: $color-primary;
+  }
+}
+
+.btn-outline-secondary {
+  &:hover {
+    background-color: rgba($color-secondary, 0.1);
+    color: darken($color-secondary, 15%);
+    border-color: $color-secondary;
+  }
+}
+
+// Icon buttons
+.btn-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  i, svg {
+    margin-right: $spacing-xs;
+  }
+  
+  &.btn-icon-right {
+    i, svg {
+      margin-right: 0;
+      margin-left: $spacing-xs;
+    }
+  }
+  
+  &.btn-icon-only {
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border-radius: 50%;
+    
+    i, svg {
+      margin: 0;
+    }
+  }
+} 

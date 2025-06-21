@@ -1,0 +1,262 @@
+.section-introduction {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 0;
+  color: $color-white;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/wp-content/uploads/2025/06/QP-Green-Park-1.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    z-index: -2;
+  }
+  
+  // Dark overlay
+  &:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($color-black, 0.5);
+    z-index: -1;
+  }
+  
+
+  &__header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  &__title {
+    margin-bottom: 2rem;
+    text-align: center;
+    
+    h2 {
+      font-size: 2.5rem;
+      font-weight: $font-weight-bold;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      font-size: 1.5rem;
+      position: relative;
+      display: inline-block;
+      color: $color-accent;
+      
+      &:before {
+        content: "";
+        height: 2px;
+        width: 50px;
+        background-color: $color-accent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -70px;
+      }
+      
+      &:after {
+        content: "";
+        height: 2px;
+        width: 50px;
+        background-color: $color-accent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: -70px;
+      }
+    }
+  }
+  
+  // Đường line ở giữa
+  .section-divider {
+    height: 1px;
+    background-color: rgba($color-white, 0.3);
+    width: 100%;
+    max-width: 80%;
+    margin: 2rem auto 3rem;
+    position: relative;
+    
+    &:before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 3px;
+      background-color: $color-accent;
+    }
+  }
+
+  &__stats {
+    margin-top: 2rem;
+    
+    // Grid tùy chỉnh
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+    
+    .stat-item {
+      text-align: center;
+      
+      .stat-label {
+        font-size: 0.9rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.75rem;
+        text-transform: uppercase;
+      }
+      
+      .stat-value {
+        color: $color-accent;
+        font-size: 3rem;
+        font-weight: $font-weight-bold;
+        line-height: 1;
+        
+        .stat-unit {
+          font-size: 1.5rem;
+          vertical-align: super;
+          margin-left: 0.25rem;
+        }
+      }
+    }
+  }
+
+  // Tablet
+  @media (max-width: $breakpoint-md) {
+    &__stats {
+      margin-top: 2rem;
+      
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+    
+    &__title {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      
+      h2 {
+        font-size: 2.2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.3rem;
+        
+        &:before, &:after {
+          width: 30px;
+        }
+        
+        &:before {
+          left: -40px;
+        }
+        
+        &:after {
+          right: -40px;
+        }
+      }
+    }
+    
+    .section-divider {
+      margin: 1.5rem auto 2rem;
+      max-width: 90%;
+    }
+  }
+  
+  // Mobile
+  @media (max-width: $breakpoint-sm) {
+    min-height: auto;
+    padding: 3rem 0;
+    
+    &__title {
+      margin-bottom: 1rem;
+      
+      h2 {
+        font-size: 2rem;
+      }
+      
+      .subtitle {
+        font-size: 1.2rem;
+        
+        &:before, &:after {
+          display: none;
+        }
+      }
+    }
+    
+    .section-divider {
+      margin: 1rem auto 1.5rem;
+      max-width: 100%;
+      
+      &:before {
+        width: 50px;
+      }
+    }
+    
+    &__stats {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+      
+      .stat-item {
+        margin-bottom: 0;
+        
+        .stat-label {
+          font-size: 0.8rem;
+          margin-bottom: 0.25rem;
+        }
+        
+        .stat-value {
+          font-size: 2rem;
+          
+          .stat-unit {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+  
+  // Extra small devices
+  @media (max-width: 375px) {
+    &__title {
+      h2 {
+        font-size: 1.8rem;
+      }
+      
+      .subtitle {
+        font-size: 1rem;
+      }
+    }
+    
+    &__stats {
+      .stats-grid {
+        gap: 0.5rem;
+      }
+      
+      .stat-item {
+        .stat-label {
+          font-size: 0.7rem;
+        }
+        
+        .stat-value {
+          font-size: 1.8rem;
+        }
+      }
+    }
+  }
+}

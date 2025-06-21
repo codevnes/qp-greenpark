@@ -1,0 +1,196 @@
+// Utility classes
+.bg-primary-light {
+  background-color: $color-primary-light;
+}
+
+.bg-secondary-light {
+  background-color: rgba($color-secondary, 0.2);
+}
+
+.bg-light {
+  background-color: $color-bg;
+}
+
+// Spacing utilities
+@each $name, $size in (
+  'xs': $spacing-xs,
+  'sm': $spacing-sm,
+  'md': $spacing-md,
+  'lg': $spacing-lg
+) {
+  .mt-#{$name} {
+    margin-top: $size !important;
+  }
+  
+  .mb-#{$name} {
+    margin-bottom: $size !important;
+  }
+  
+  .my-#{$name} {
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+  }
+  
+  .pt-#{$name} {
+    padding-top: $size !important;
+  }
+  
+  .pb-#{$name} {
+    padding-bottom: $size !important;
+  }
+  
+  .py-#{$name} {
+    padding-top: $size !important;
+    padding-bottom: $size !important;
+  }
+}
+
+// Section padding
+.section-padding {
+  padding: $spacing-lg 0;
+  
+  @include md {
+    padding: calc($spacing-lg * 2) 0;
+  }
+}
+
+// Shadows
+.shadow-sm {
+  box-shadow: 0 2px 10px rgba($color-black, 0.05);
+}
+
+.shadow-md {
+  box-shadow: $shadow-card;
+}
+
+.shadow-lg {
+  box-shadow: 0 10px 30px rgba($color-black, 0.1);
+}
+
+// Rounded corners
+.rounded-base {
+  border-radius: $radius-base;
+}
+
+.rounded-lg {
+  border-radius: $radius-lg;
+}
+
+// Text utilities
+.text-sm {
+  font-size: $font-size-sm;
+}
+
+.text-lg {
+  font-size: $font-size-lg;
+}
+
+.font-bold {
+  font-weight: $font-weight-bold;
+}
+
+// Image utilities
+.img-cover {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+// Display utilities
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.d-flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+// Font size utilities
+.font-size-xxs { font-size: $font-size-xxs !important; }
+.font-size-xs { font-size: $font-size-xs !important; }
+.font-size-sm { font-size: $font-size-sm !important; }
+.font-size-base { font-size: $font-size-base !important; }
+.font-size-lg { font-size: $font-size-lg !important; }
+.font-size-xl { font-size: $font-size-xl !important; }
+.font-size-xxl { font-size: $font-size-xxl !important; }
+.font-size-xxxl { font-size: $font-size-xxxl !important; }
+
+// Font weight utilities
+.font-weight-thin { font-weight: $font-weight-thin !important; }
+.font-weight-light { font-weight: $font-weight-light !important; }
+.font-weight-regular { font-weight: $font-weight-regular !important; }
+.font-weight-medium { font-weight: $font-weight-medium !important; }
+.font-weight-semi-bold { font-weight: $font-weight-semi-bold !important; }
+.font-weight-bold { font-weight: $font-weight-bold !important; }
+
+// Text alignment
+.text-left { text-align: left !important; }
+.text-center { text-align: center !important; }
+.text-right { text-align: right !important; }
+.text-justify { text-align: justify !important; }
+
+// Text decoration
+.text-underline { text-decoration: underline !important; }
+.text-none { text-decoration: none !important; }
+
+// Text transformation
+.text-uppercase { text-transform: uppercase !important; }
+.text-lowercase { text-transform: lowercase !important; }
+.text-capitalize { text-transform: capitalize !important; }
+
+// Responsive text alignment
+@media (min-width: $breakpoint-sm) {
+  .text-sm-left { text-align: left !important; }
+  .text-sm-center { text-align: center !important; }
+  .text-sm-right { text-align: right !important; }
+}
+
+@media (min-width: $breakpoint-md) {
+  .text-md-left { text-align: left !important; }
+  .text-md-center { text-align: center !important; }
+  .text-md-right { text-align: right !important; }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .text-lg-left { text-align: left !important; }
+  .text-lg-center { text-align: center !important; }
+  .text-lg-right { text-align: right !important; }
+}
+
+// Responsive font sizes
+@media (min-width: $breakpoint-sm) {
+  .font-size-sm-xxs { font-size: $font-size-xxs !important; }
+  .font-size-sm-xs { font-size: $font-size-xs !important; }
+  .font-size-sm-sm { font-size: $font-size-sm !important; }
+  .font-size-sm-base { font-size: $font-size-base !important; }
+  .font-size-sm-lg { font-size: $font-size-lg !important; }
+  .font-size-sm-xl { font-size: $font-size-xl !important; }
+  .font-size-sm-xxl { font-size: $font-size-xxl !important; }
+  .font-size-sm-xxxl { font-size: $font-size-xxxl !important; }
+}
+
+@media (min-width: $breakpoint-md) {
+  .font-size-md-xxs { font-size: $font-size-xxs !important; }
+  .font-size-md-xs { font-size: $font-size-xs !important; }
+  .font-size-md-sm { font-size: $font-size-sm !important; }
+  .font-size-md-base { font-size: $font-size-base !important; }
+  .font-size-md-lg { font-size: $font-size-lg !important; }
+  .font-size-md-xl { font-size: $font-size-xl !important; }
+  .font-size-md-xxl { font-size: $font-size-xxl !important; }
+  .font-size-md-xxxl { font-size: $font-size-xxxl !important; }
+}
+
+@media (min-width: $breakpoint-lg) {
+  .font-size-lg-xxs { font-size: $font-size-xxs !important; }
+  .font-size-lg-xs { font-size: $font-size-xs !important; }
+  .font-size-lg-sm { font-size: $font-size-sm !important; }
+  .font-size-lg-base { font-size: $font-size-base !important; }
+  .font-size-lg-lg { font-size: $font-size-lg !important; }
+  .font-size-lg-xl { font-size: $font-size-xl !important; }
+  .font-size-lg-xxl { font-size: $font-size-xxl !important; }
+  .font-size-lg-xxxl { font-size: $font-size-xxxl !important; }
+} 

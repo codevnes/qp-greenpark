@@ -1,0 +1,95 @@
+// =========================
+// Theme Variables
+// =========================
+
+// Colors
+$color-primary: #1d4333;
+$color-primary-light: #60a783;
+$color-secondary: #b3a075;
+$color-accent: #E89E47;
+$color-bg: #F6F6F3;
+$color-text: #24292F;
+$color-gray: #BBC2CC;
+$color-border: #E5E7EB;
+$color-success: #8DC63F;
+$color-white: #fff;
+$color-black: #000;
+$dark-blue: #0a2039; // Dark blue color for document section background
+
+// Aliases for consistency
+$white: $color-white;
+$primary: $color-primary;
+
+
+$color-green-50: #f1f8f4;
+$color-green-100: #dcefe2;
+$color-green-200: #bcdec9;
+$color-green-300: #8fc6a8;
+$color-green-400: #60a783;
+$color-green-500: #3f8a66;
+$color-green-600: #2d6e51;
+$color-green-700: #245842;
+$color-green-800: #1d4333;
+$color-green-900: #1a3a2e;
+$color-green-950: #0e2019;
+
+
+
+
+// Typography
+$font-primary: 'SVN-Gilroy', Arial, sans-serif;
+$font-secondary: 'SVN-Gilroy', Arial, sans-serif;
+// Font size variables (from largest to smallest)
+$font-size-xxxl: 42px;
+$font-size-xxl: 32px;
+$font-size-xl: 24px;
+$font-size-lg: 20px;
+$font-size-md: 16px;
+$font-size-sm: 14px;
+$font-size-xs: 12px;
+$font-size-xxs: 10px;
+
+// Font weight variables
+$font-weight-thin: 100;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+
+// Border Radius
+$radius-base: 12px;
+$radius-lg: 24px;
+$shadow-card: 0 4px 20px rgba($color-primary, 0.08);
+
+// =========================
+// Shadow Levels
+// =========================
+
+$shadow-xs: 0 1px 2px 0 rgba($color-black, 0.05);
+$shadow-sm: 0 1.5px 4px 0 rgba($color-black, 0.07);
+$shadow-md: 0 4px 12px 0 rgba($color-black, 0.09);
+$shadow-lg: 0 8px 24px 0 rgba($color-black, 0.12);
+$shadow-xl: 0 16px 32px 0 rgba($color-black, 0.16);
+
+// Shadow mạnh có thể mix thêm màu primary nếu muốn nổi bật:
+$shadow-primary: 0 4px 20px rgba($color-primary, 0.10);
+
+// Không bóng
+$shadow-none: none;
+
+
+// Spacing
+$spacing-xs: 4px;
+$spacing-sm: 8px;
+$spacing-md: 16px;
+$spacing-lg: 32px;
+
+// Breakpoints
+$breakpoint-xs: 0;
+$breakpoint-sm: 576px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 992px;
+$breakpoint-xl: 1200px;
+$breakpoint-xxl: 1400px; 
