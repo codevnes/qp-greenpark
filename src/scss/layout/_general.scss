@@ -190,30 +190,35 @@ h6 {
   border: 2px solid $color-primary;
   font-weight: 400;
   font-size: $font-size-xs;
-  
+
   &:hover {
-      background-color: darken($color-primary, 5%);
-      color: $color-white;
-      
-      .btn-icon {
-          background-color: $color-secondary;
-      }
+    background-color: darken($color-primary, 5%);
+    color: $color-white;
+
+    .btn-icon {
+      background-color: $color-secondary;
+    }
   }
-  
+
   .btn-icon {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 32px;
-      height: 32px;
-      border-radius: 50%;
-      background-color: $color-accent;
-      color: $color-primary;
-      margin-left: 15px;
-      transition: all 0.3s ease;
-      
-      i {
-          font-size: $font-size-xs;
-      }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: $color-accent;
+    color: $color-primary;
+    margin-left: 15px;
+    transition: all 0.3s ease;
+
+    i {
+      font-size: $font-size-xs;
+    }
   }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
 }
