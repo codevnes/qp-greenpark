@@ -17,8 +17,6 @@ get_header();
     <div id="pagepiling">
         <?php get_template_part('template-parts/section/section-video'); ?>
 
-        <?php get_template_part('template-parts/section/section-overview'); ?>
-
         <?php get_template_part('template-parts/section/section-introduction'); ?>
 
         <?php get_template_part('template-parts/section/section-masterplan'); ?>
